@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog 
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:n0="http://www.oracle.com/xml/ns/dbchangelog-ext" 
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
+	http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+	<changeSet id="c8689022d70192b86062a3d1b36945e7807c1844" author="(PROD)-Generated" failOnError="false"    >
+		<n0:runOracleScript objectName="SCRIPT" objectType="APEX" ownerName="PROD" sourceType="STRING"  >
+			<n0:source><![CDATA[prompt --application/shared_components/navigation/lists/navigation_menu
+begin
+--   Manifest
+--     LIST: Navigation Menu
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2022.10.07'
+,p_release=>'22.2.0'
+,p_default_workspace_id=>123456789
+,p_default_application_id=>101
+,p_default_id_offset=>0
+,p_default_owner=>'PROD'
+);
+wwv_flow_imp_shared.create_list(
+ p_id=>wwv_flow_imp.id(3880278234728960)
+,p_name=>'Navigation Menu'
+,p_list_status=>'PUBLIC'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(4090411918729973)
+,p_list_item_display_sequence=>10
+,p_list_item_link_text=>'Home'
+,p_list_item_link_target=>'f?p=&APP_ID.:1:&APP_SESSION.::&DEBUG.:::'
+,p_list_item_icon=>'fa-home'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp.component_end;
+end;
+/
+]]></n0:source>
+		</n0:runOracleScript>
+	</changeSet>
+</databaseChangeLog>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog 
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:n0="http://www.oracle.com/xml/ns/dbchangelog-ext" 
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
+	http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+	<changeSet id="ad33e49fc751294e8fc25de4f2badd2ea5872965" author="(PROD)-Generated" failOnError="false"    >
+		<n0:runOracleScript objectName="SCRIPT" objectType="APEX" ownerName="PROD" sourceType="STRING"  >
+			<n0:source><![CDATA[prompt --application/shared_components/navigation/tabs/standard
+begin
+--   Manifest
+--     TABS: 101
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2022.10.07'
+,p_release=>'22.2.0'
+,p_default_workspace_id=>123456789
+,p_default_application_id=>101
+,p_default_id_offset=>0
+,p_default_owner=>'PROD'
+);
+null;
+wwv_flow_imp.component_end;
+end;
+/
+]]></n0:source>
+		</n0:runOracleScript>
+	</changeSet>
+</databaseChangeLog>
